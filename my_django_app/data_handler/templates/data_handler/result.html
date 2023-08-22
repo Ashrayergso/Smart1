@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Data Comparison Result</h1>
+        <div class="mt-5">
+            <h2>Excel Data</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        {% for header in excel_data.columns %}
+                            <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in excel_data.itertuples %}
+                        <tr>
+                            {% for cell in row %}
+                                <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-5">
+            <h2>Smartsheet Data</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        {% for header in smartsheet_data.columns %}
+                            <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in smartsheet_data.itertuples %}
+                        <tr>
+                            {% for cell in row %}
+                                <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-5">
+            <h2>Updated Smartsheet Data</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        {% for header in updated_smartsheet_data.columns %}
+                            <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in updated_smartsheet_data.itertuples %}
+                        <tr>
+                            {% for cell in row %}
+                                <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+```
