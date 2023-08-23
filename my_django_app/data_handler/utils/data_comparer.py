@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 
 def compare_data(smartsheet_df, excel_df):
@@ -25,4 +24,3 @@ def compare_data(smartsheet_df, excel_df):
     different_rows = matches[matches['is_same'] == False]
 
     return same_rows, different_rows, smartsheet_only, excel_only
-```

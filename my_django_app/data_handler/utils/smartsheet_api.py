@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 import smartsheet
 
@@ -20,4 +19,3 @@ def get_smartsheet_data():
 
     df = pd.DataFrame(data)
     return df
-```

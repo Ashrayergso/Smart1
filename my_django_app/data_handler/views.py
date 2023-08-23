@@ -1,4 +1,3 @@
-```python
 from django.shortcuts import render
 from .utils import smartsheet_api, excel_reader, data_comparer, data_updater
 
@@ -28,4 +27,3 @@ def process_data(request):
     }
 
     return render(request, 'data_handler/result.html', context)
-```

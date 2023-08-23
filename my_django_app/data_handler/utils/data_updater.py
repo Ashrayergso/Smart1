@@ -1,4 +1,3 @@
-```python
 import pandas as pd
 from .smartsheet_api import get_smartsheet_df, update_smartsheet
 from .data_comparer import compare_dataframes
@@ -25,4 +24,3 @@ def compare_dataframes(smartsheet_df, excel_df):
     merged_df = merged_df.loc[:,~merged_df.columns.duplicated()]
 
     return merged_df
-```

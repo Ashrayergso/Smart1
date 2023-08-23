@@ -1,4 +1,3 @@
-```python
 from django.test import TestCase
 from .utils import smartsheet_api, excel_reader, data_comparer, data_updater
 
@@ -26,4 +25,3 @@ class DataUpdaterTest(TestCase):
         comparison_result = data_comparer.compare_data(smartsheet_data, excel_data)
         result = data_updater.update_data(comparison_result)
         self.assertIsNotNone(result)
-```
