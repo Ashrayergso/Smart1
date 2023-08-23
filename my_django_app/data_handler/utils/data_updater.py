@@ -1,6 +1,6 @@
 import pandas as pd
-from .smartsheet_api import get_smartsheet_data, update_smartsheet
-from .data_comparer import compare_dataframes
+from .smartsheet_api import get_smartsheet_data
+from .data_comparer import compare_data
 
 def update_data(excel_df):
     smartsheet_df = get_smartsheet_data()
@@ -8,8 +8,7 @@ def update_data(excel_df):
     # Compare the dataframes and get the updated dataframe
     updated_df = compare_dataframes(smartsheet_df, excel_df)
 
-    # Update the smartsheet with the updated dataframe
-    update_smartsheet(updated_df)
+    # TODO: Add code here to update the smartsheet with the updated dataframe
 
 def compare_dataframes(smartsheet_df, excel_df):
     # Merge the dataframes on 'name', 'sign on date', and 'sign off date'
