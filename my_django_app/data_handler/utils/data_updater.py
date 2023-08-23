@@ -1,9 +1,9 @@
 import pandas as pd
-from .smartsheet_api import get_smartsheet_df, update_smartsheet
+from .smartsheet_api import get_smartsheet_data, update_smartsheet
 from .data_comparer import compare_dataframes
 
 def update_data(excel_df):
-    smartsheet_df = get_smartsheet_df()
+    smartsheet_df = get_smartsheet_data()
 
     # Compare the dataframes and get the updated dataframe
     updated_df = compare_dataframes(smartsheet_df, excel_df)
