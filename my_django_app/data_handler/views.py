@@ -27,3 +27,7 @@ def process_data(request):
     }
 
     return render(request, 'data_handler/result.html', context)
+
+def result(request):
+    # TODO: Implement the functionality for the result view
+    pass
